@@ -1,0 +1,14 @@
+{
+  "name": "walknorth",
+  "version": "1.0.0",
+  "description": "Walknorth is service that provides information about hike routes in Iceland",
+  "main": "tailwind.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
