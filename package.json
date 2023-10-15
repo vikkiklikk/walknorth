@@ -4,7 +4,7 @@
   "description": "Walknorth is service that provides information about hike routes in Iceland",
   "main": "tailwind.config.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/styles.css --watch"
   },
   "author": "",
   "license": "ISC",
