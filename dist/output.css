@@ -772,3 +772,8 @@ video {
   --tw-text-opacity: 1;
   color: rgb(39 77 131 / var(--tw-text-opacity));
 }
+
+.hover\:text-yellow-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(234 179 8 / var(--tw-text-opacity));
+}
