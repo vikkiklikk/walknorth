@@ -7,7 +7,7 @@
     <title>Walknorth</title>
     <link href="/dist/output.css" rel="stylesheet" />
 </head>
-<body class="bg-customBlue2">
+<body class="bg-customBlue2 text-customFontColor">
     <div class="text-3xl">
         <!--Navbar-->
         <nav class="bg-customBlue2 flex justify-between">
@@ -15,30 +15,31 @@
             <!-- Walknorth Logo-->
             <img class="flex items-center space-x-2 p-4" src="images/logo-walknorth-original.svg" alt="Walknorth Logo">
             <!-- Walknorth Title-->
-            <h1 class="text-lg text-[#56729B] font-semibold uppercase">Walknorth</h1>
+            <h1 class="text-lg text-customLogoText font-semibold uppercase">Walknorth</h1>
         </div>
             <!-- Hamburger Menu Icon -->
             <a href="#"> <i class='bx bx-menu p-4'></i></a>
         </nav>
     </div>
-    <div class="flex">
+    <div class="flex pt-28 pl-32">
         <!--top of the page, picture and info-->
-        <img src="/src/images/mount-keilir.jpg" class="flex rounded-2xl h-60" viewbox="0 0 100 100" alt="Keilir">
-        <div>
+        <img src="/src/images/mount-keilir.jpg" class="flex  h-96 rounded-2xl" alt="Keilir">
+        <div class="flex pl-16 w-2/5">
             <!--Section with the name of the trail and the small info-->
-            <ul>
-                <li>
-                    <h2 class="text-lg text-[#56729B] font-semibold">Keilir</h3>
-                    <img src="/src/images/icon-star.svg" alt="star"></li>
-                <li>
+            <ul class="flex-col space-y-3">
+                <li class="flex flex-row space-x-36">
+                    <h2 class="text-3xl font-semibold ">Keilir</h3>
+                        <button id="favoriteButton"><img src="/src/images/icon-star.svg" alt="star"></button>
+                    </li>
+                <li class="flex flex-row pt-6 space-x-6">
                     <img src="/src/images/icon-car.svg" alt="car">
-                    <p>36 km from Reykjavík</p></li>
-                <li>
+                    <p class="text-lg pt-1">36 km from Reykjavík</p></li>
+                <li class="flex flex-row space-x-7">
                     <img src="/src/images/icon-timer.svg" alt="timer">
-                    <p>2 - 3 hours</p></li>
-                <li>
+                    <p class="text-lg pt-1">2 - 3 hours</p></li>
+                <li class="flex flex-row space-x-6">
                     <img src="/src/images/icon-difficulty.svg" alt="meter">
-                    <p>Moderate</p></li>
+                    <p class="text-lg pt-1">Moderate</p></li>
             </ul>
         </div>
     </div>
