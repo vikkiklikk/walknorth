@@ -5,36 +5,38 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walknorth</title>
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="/src/style-bjork.css" rel="stylesheet" />
 </head>
-<body class="bg-customBlue2 text-customFontColor">
-    <div class="text-3xl">
+<body>
+    <div class="nav-container">
         <!--Navbar-->
-        <nav class="bg-customBlue2 flex justify-between">
-            <div class="flex justify-between items-center">
-            <!-- Walknorth Logo-->
-            <img class="flex items-center space-x-2 p-4" src="images/logo-walknorth-original.svg" alt="Walknorth Logo">
-            <!-- Walknorth Title-->
-            <h1 class="text-lg text-customLogoText font-semibold uppercase">Walknorth</h1>
-        </div>
-            <!-- Hamburger Menu Icon -->
-            <a href="#"> <i class='bx bx-menu p-4'></i></a>
+        <nav>
+            <div class="nav-space-div">
+                <!-- Walknorth Logo-->
+                <!--class="flex items-center space-x-2 p-4"-->
+                <img class="logo-container" src="images/logo-walknorth-original.svg" alt="Walknorth Logo">
+                <!-- Walknorth Title-->
+                <h1 class="logo-text">Walknorth</h1>
+            </div>
+            <!-- Hamburger Menu Icon class='bx bx-menu p-4' -->
+            <a class="ham-menu-icon" href="#"> <i class='bx bx-menu p-4'></i></a>
         </nav>
     </div>
-    <div class="flex pt-28 pl-32">
+    <div class="content">
         <!--top of the page, picture and info-->
-        <img src="/src/images/mount-keilir.jpg" class="flex  h-96 rounded-2xl" alt="Keilir">
-        <div class="flex pl-16 w-2/5">
+        <img src="/src/images/mount-keilir.jpg" alt="Keilir">
+        <div class="info-section">
             <!--Section with the name of the trail and the small info-->
-            <ul class="flex-col space-y-3">
-                <li class="flex flex-row space-x-36">
-                    <h2 class="text-3xl font-semibold ">Keilir</h3>
-                        <button id="favoriteButton" class="">
-                            <img id="emptyStar" src="/src/images/icon-star.svg" alt="star">
-                            <!--I'm trying to hide the filled star, can't get it to work-->
-                            <img id="filledStar" src="/src/images/icon-filledstar.svg" class="hidden" alt="filled star">
-                        </button>
-                    </li>
+            <ul>
+                <!--class="flex flex-row space-x-36"-->
+                <li class="info-section-li-1">
+                    <h2>Keilir</h2>
+                    <button id="favoriteButton" class="favoriteButton">
+                        <img id="emptyStar" src="/src/images/icon-star.svg" class="star" alt="star">
+                        <!--I'm trying to hide the filled star, can't get it to work-->
+                        <img id="filledStar" src="/src/images/icon-filledstar.svg" class="filled-star" alt="filled star">
+                    </button>
+                </li>
                 <li class="flex flex-row pt-6 space-x-6">
                     <img src="/src/images/icon-car.svg" alt="car">
                     <p class="text-lg pt-1">36 km from Reykjavík</p></li>
@@ -47,12 +49,17 @@
             </ul>
         </div>
     </div>
-    <div>
+    <div class="flex pt-28 pl-32 pr-10">
         <!--Section with more information and the map-->
-        <h3>How to get there</h3>
-        <p>Text</p>
-        <img src="/src/images/Map-keilir.PNG" alt="map of keilir">
-
+        <div class="">
+            <h3 class="text-xl font-semibold">How to get there</h3>
+            <p class="text-lg">The usual route is to walk to the mountain from the north of Oddafell, but it is also possible to walk from Raudhol, just over the middle between Reykjanesbraut and Oddafell. Keilir is a unique mountain in the west of the Reykjanes Peninsula. The mountain, which is stretched, is seen widely, e.g. from the shores of the capital area, the coast and rosemary valleys.
+            This formidable mountain emerged from an eruption under a glacier during the ice age. Initially, Keilir has been a part of the mooring ridges that have been destroyed over the years, due to the weather, and hid the new lava so that the mountain remains.Walking distance to the mountain is about 2-3 hours if you leave the north of Oddafell or from Raudhol north-west. The increase is about 250 meters.</p>
+        </div>
+        <div class="">
+            <img src="/src/images/Map-keilir.PNG" class=" h-80 rounded-2xl" alt="map of keilir">
+        </div>
+        
     </div>
     <script src="main.js"></script>
 </body>

@@ -1,0 +1,138 @@
+
+         /* Add your custom colors here. Replace with the actual color codes you've used in your Tailwind configuration. */
+         :root {
+            --custom-blue-2: #D8E0E9;
+            --custom-font-color: #353535;
+            --custom-logo-text: #274D83;
+            --custom-blue-1: #56729B;
+        }
+
+
+        body {
+            background-color: var(--custom-blue-2);
+            color: var(--custom-font-color);
+        }
+
+        .nav-container {
+            font-size: 30px;
+        }
+
+        nav {
+            background-color: var(--custom-blue-2);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .nav-space-div {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 0.5rem; /* 8px */
+            padding: 16px; /* p-4 in Tailwind */
+        }
+
+        .logo-text {
+            font-size: 1.125rem; /* text-lg */
+            font-weight: 600; /* font-semibold */
+            text-transform: uppercase;
+            color: var(--custom-logo-text);
+        }
+
+        .ham-menu-icon {
+            padding: 16px;
+            color: var(--custom-font-color);
+        }
+
+        .content {
+            padding-top: 112px; /* pt-28 */
+            padding-left: 128px; /* pl-32 */
+            display: flex;
+        }
+
+        .content img {
+            height: 24rem; /* h-96 */
+            border-radius: 1rem; /* rounded-2xl */
+        }
+
+        .info-section {
+            padding-left: 64px; /* pl-16 */
+            width: 40%; /* w-2/5 */
+        }
+
+        .info-section ul {
+            display: flex;
+            flex-direction: column;
+            gap: 12px; /* space-y-3 */
+        }
+
+        .info-section-li-1 {
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            flex-wrap: nowrap;
+        }
+
+        .info-section h2 {
+            margin-right: 8rem;
+            font-size: 1.875rem; /* text-3xl */
+            font-weight: 600; /* font-semibold */
+        }
+
+        /*.favoriteButton {
+            width: 60px;
+            height: 60px;
+            background: none;
+            color: inherit;
+            border: none;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            outline: inherit;
+            display: inline-block;
+        }*/
+        .favoriteButton {
+            height: 60px;
+
+        }
+
+        .star {
+            height: auto;
+        }
+
+        .filled-star {
+            width: 60px;
+            display: none;
+        }
+
+        .text-lg {
+            font-size: 1.125rem; /* text-lg */
+        }
+
+        .how-to-section {
+            padding-top: 112px; /* pt-28 */
+            padding-left: 128px; /* pl-32 */
+            padding-right: 40px; /* pr-10 */
+        }
+
+        .how-to-section h3 {
+            font-size: 1.25rem; /* text-xl */
+            font-weight: 600; /* font-semibold */
+        }
+
+        .map-image {
+            height: 20rem; /* h-80 */
+            border-radius: 1rem; /* rounded-2xl */
+        }
+
+        footer {
+            background-color: var(--custom-blue-1);
+        }
+
+        /* ... additional styles ... */
