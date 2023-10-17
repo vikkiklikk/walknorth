@@ -97,27 +97,39 @@
 
 
 
-// Select the button based on its ID and specify it as an HTMLElement, which could be null
-const favoriteButton = document.getElementById('favoriteButton') as HTMLElement | null;
+// First, we need to make sure that the elements are not just generic HTML elements, but more specifically, 
+// they could be SVG elements or specific types of HTML elements like 'button' for better type assertions.
 
-// Proceed only if favoriteButton is not null (i.e., the element was successfully selected)
-if (favoriteButton) {
-  // Add a click event listener
-  favoriteButton.addEventListener('click', () => {  // Using arrow function here for brevity, but regular function works too
-    // The non-null assertion is used as favoriteButton is already checked for non-null
-    // and TypeScript doesn't automatically infer that within this block it's still non-null
-    const isFavorited = favoriteButton.textContent === '★';
+const favoriteButton = document.getElementById('favoriteButton') as HTMLButtonElement | null;
+const emptyStar = document.getElementById('emptyStar') as SVGSVGElement | null; // 'SVGSVGElement' is used for SVG elements
+const filledStar = document.getElementById('filledStar') as SVGSVGElement | null;
+
+// Now we need to check if the elements are truthy. Since we're in TypeScript, we want to avoid 
+// potential null references, hence the need for these checks.
+
+if (favoriteButton && emptyStar && filledStar) {
+  // Add a click event listener. The type of event and its handler are inferred so we don't need to explicitly declare them.
+  favoriteButton.addEventListener('click', function() {
+    // Determine the current state based on the visibility of the 'filledStar' SVG
+    const isFavorited = filledStar.hasAttribute('hidden');
 
     // Toggle the star state
-    favoriteButton.textContent = isFavorited ? '☆' : '★'; // toggle between filled and outlined star
+    if (isFavorited) {
+      // If currently favorited, we show the empty star and hide the filled star
+      filledStar.setAttribute('hidden', '');
+      emptyStar.removeAttribute('hidden');
+    } else {
+      // If not currently favorited, we show the filled star and hide the empty star
+      emptyStar.setAttribute('hidden', '');
+      filledStar.removeAttribute('hidden');
+    }
 
     // Add extra styles or classes as needed, for example, changing color
-    favoriteButton.classList.toggle('text-yellow-500', !isFavorited); // fill the star if it's favorited
+    // This could apply to the SVGs or perhaps a container element
+    favoriteButton.classList.toggle('extra-styles', !isFavorited);
 
     // Here, you can also add code to handle this change, such as saving it to a backend or browser storage.
   });
 } else {
-  // Handle the case where the 'favoriteButton' element was not found
-  // This could be a console warning for debugging, or any other error handling method appropriate for your application
-  console.warn("Element with ID 'favoriteButton' not found!");
+  console.error('SVG elements or button not found!');
 }

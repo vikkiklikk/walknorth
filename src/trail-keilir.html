@@ -29,7 +29,11 @@
             <ul class="flex-col space-y-3">
                 <li class="flex flex-row space-x-36">
                     <h2 class="text-3xl font-semibold ">Keilir</h3>
-                        <button id="favoriteButton" class=""><img src="/src/images/icon-star.svg" class="hover:text-yellow-500" alt="star"></button>
+                        <button id="favoriteButton" class="">
+                            <img id="emptyStar" src="/src/images/icon-star.svg" alt="star">
+                            <!--I'm trying to hide the filled star, can't get it to work-->
+                            <img id="filledStar" src="/src/images/icon-filledstar.svg" class="hidden" alt="filled star">
+                        </button>
                     </li>
                 <li class="flex flex-row pt-6 space-x-6">
                     <img src="/src/images/icon-car.svg" alt="car">
