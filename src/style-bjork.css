@@ -7,6 +7,11 @@
             --custom-blue-1: #56729B;
         }
 
+        html {
+            font-family: 'Bebas Neue', sans-serif;
+            font-family: 'Lato', sans-serif;
+        }
+
 
         body {
             background-color: var(--custom-blue-2);
@@ -38,10 +43,11 @@
         }
 
         .logo-text {
-            font-size: 1.125rem; /* text-lg */
-            font-weight: 600; /* font-semibold */
+            font-size: 1.5rem;
             text-transform: uppercase;
             color: var(--custom-logo-text);
+            font-family: 'Bebas Neue';
+            letter-spacing: 1px;
         }
 
         .ham-menu-icon {
@@ -154,10 +160,6 @@
             margin-right: 24px;
         }
 
-        /*.text-lg {
-            font-size: 1.125rem; /* text-lg */
-        /*}*/
-
         .how-to-section {
             display: flex;
             padding-top: 112px; /* pt-28 */
@@ -176,7 +178,7 @@
 
         .how-to-section p {
             font-size: 1.25rem;
-            line-height: 1.5rem;
+            line-height: 1.75rem;
         }
 
         .map-area {
