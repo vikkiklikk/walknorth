@@ -97,39 +97,28 @@
 
 
 
-// First, we need to make sure that the elements are not just generic HTML elements, but more specifically, 
-// they could be SVG elements or specific types of HTML elements like 'button' for better type assertions.
-
 const favoriteButton = document.getElementById('favoriteButton') as HTMLButtonElement | null;
-const emptyStar = document.getElementById('emptyStar') as SVGSVGElement | null; // 'SVGSVGElement' is used for SVG elements
-const filledStar = document.getElementById('filledStar') as SVGSVGElement | null;
-
-// Now we need to check if the elements are truthy. Since we're in TypeScript, we want to avoid 
-// potential null references, hence the need for these checks.
+const emptyStar = document.getElementById('emptyStar') as HTMLImageElement | null;
+const filledStar = document.getElementById('filledStar') as HTMLImageElement | null;
 
 if (favoriteButton && emptyStar && filledStar) {
-  // Add a click event listener. The type of event and its handler are inferred so we don't need to explicitly declare them.
   favoriteButton.addEventListener('click', function() {
-    // Determine the current state based on the visibility of the 'filledStar' SVG
-    const isFavorited = filledStar.hasAttribute('hidden');
+    // Check whether the filled star is currently displayed.
+    const isFavorited = getComputedStyle(filledStar).display === "block";
 
-    // Toggle the star state
     if (isFavorited) {
-      // If currently favorited, we show the empty star and hide the filled star
-      filledStar.setAttribute('hidden', '');
-      emptyStar.removeAttribute('hidden');
+      // If the filled star is visible, hide it and show the empty star.
+      filledStar.style.display = 'none';
+      emptyStar.style.display = 'block';
     } else {
-      // If not currently favorited, we show the filled star and hide the empty star
-      emptyStar.setAttribute('hidden', '');
-      filledStar.removeAttribute('hidden');
+      // If the filled star is not visible (i.e., the empty star is visible), hide the empty star and show the filled star.
+      filledStar.style.display = 'block';
+      emptyStar.style.display = 'none';
     }
 
-    // Add extra styles or classes as needed, for example, changing color
-    // This could apply to the SVGs or perhaps a container element
-    favoriteButton.classList.toggle('extra-styles', !isFavorited);
-
-    // Here, you can also add code to handle this change, such as saving it to a backend or browser storage.
+    // Here, you can also add code for any additional styling or functionality you want to trigger on this action.
   });
 } else {
-  console.error('SVG elements or button not found!');
+  console.error('One or more elements were not found!');
 }
+
