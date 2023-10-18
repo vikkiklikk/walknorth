@@ -180,10 +180,12 @@ nav a:hover {
     top: 30%; /* Vertically center the text */
     left: 50%; /* Horizontally center the text */
     transform: translate(-50%, -50%); /* Center the text precisely */
-    color: white; /* Set text color */
+    color: var(--custom-font-color); /* Set text color */
     text-align: center; /* Center-align text */
-    background: rgba(0, 0, 0, 0.5); /* Add a semi-transparent background for readability */
     padding: 10px; /* Add padding for readability */
+    font-family: 'Bebas Neue';
+    font-size: 3rem;
+    letter-spacing: 0.25rem;
 }
 
 .hike-header {
@@ -192,6 +194,7 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     margin: 30px;
+    margin-top: 50px;
 }
 
 .carousel-container {
@@ -286,12 +289,20 @@ button {
     position: absolute;
     top: 105%;
     left: 20%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 4rem;
 }
 
 #next-button {
     position: absolute;
     top: 105%;
     right: 20%;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 4rem;
 }
 
 .footer-div {
