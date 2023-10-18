@@ -26,26 +26,54 @@ prevButton.addEventListener("click", () => moveCarousel(currentIndex - 1));
 nextButton.addEventListener("click", () => moveCarousel(currentIndex + 1));
 
 // Toggle hamburger menu
-document.addEventListener('DOMContentLoaded', function() {
-    const menuBtn = document.getElementById("menuBtn");
-    const dropdownMenu = document.querySelector("#dropdown-menu");
 
-    menuBtn.addEventListener("click", function() {
-        dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+// Wait for the DOM content to fully load
+document.addEventListener('DOMContentLoaded', function() {
+    // Get references to the button and the menu
+    const menuBtn = document.getElementById('menuBtn');
+    const menu = document.getElementById('dropdownMenu');
+    const closeBtn = document.querySelector('.close');
+
+    if (!menuBtn || !menu || !closeBtn) {
+        // One of the elements couldn't be found, log an error for debugging
+        console.error('One of the elements is missing:', { menuBtn, menu, closeBtn });
+        return; // Stop executing because elements are missing
+    }
+
+    // Define a function to toggle the menu's visibility
+    const showHideMenu = () => {
+        const isMenuVisible = menu.style.display === 'block';
+        menu.style.display = isMenuVisible ? 'none' : 'block';
+
+        // If you want to use a class to control visibility, you can comment out the lines above
+        // and use the line below, but you need to ensure the corresponding CSS is set.
+        // menu.classList.toggle('scale-x-0');
+    };
+
+    // Attach the click event listener to the menu button
+    menuBtn.addEventListener('click', function(event) {
+        // Prevent this event from propagating up
+        event.stopPropagation();
+        // Toggle the menu's visibility
+        showHideMenu();
     });
 
-    // Close the dropdown menu when clicking outside of it
-    document.addEventListener("click", function(event) {
-        if (!dropdownMenu.contains(event.target) && event.target !== menuBtn) {
-            dropdownMenu.style.display = "none";
+    // Close the menu if a click occurs outside of the menu
+    document.addEventListener('click', function(event) {
+        const isClickInside = menu.contains(event.target) || menuBtn.contains(event.target);
+
+        if (!isClickInside) {
+            menu.style.display = 'none';
         }
     });
 
-    // Close the dropdown menu when clicking on the X button
-    const closeBtn = document.querySelector(".close"); // if you use class, or use #closeBtn if you use ID
-        closeBtn.addEventListener("click", function() {
-            dropdownMenu.style.display = "none";
-        });
+    // Attach the click event listener to the close button inside the menu
+    closeBtn.addEventListener('click', function(event) {
+        // Prevent this event from propagating up
+        event.stopPropagation();
+        // Hide the menu
+        menu.style.display = 'none';
+    });
 });
 
 "use strict";
