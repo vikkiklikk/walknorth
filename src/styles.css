@@ -328,7 +328,7 @@ button {
   background-color: var(--custom-blue-1);
   color: #F8F8F8;
   align-items:baseline;
-  padding: 15px;
+  padding: 20px;
   transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add a smooth ease-in and ease-out transition for the hover effect */
   transform: scale(1);
 }
@@ -339,7 +339,7 @@ button {
   height: 70px;
   background-color: #F8F8F8;
   border-radius: 20px;
-  color: #323232;
+  color: var(--custom-logo-text);
   justify-content: center;
   padding-top: 22px;
   align-items: baseline;
@@ -362,15 +362,25 @@ button {
 
 .review-card-inner {
   display: flex;
+  height: auto;
+  width: 300px;
   margin-top: 15px;
   margin-bottom: 15px;
+  justify-content: space-between;
+}
+
+.review-card-inner h4 {
+  padding-right: 60px;
+  margin-top: 35px;
+}
+
+.review-stars {
+  margin-bottom: 35px;
 }
 
 .review-card h3 {
   color: var(--custom-logo-text);
-  font-family: 'Bebas Neue';
-  font-size: 1.75rem;
-  letter-spacing: 1px;
+  font-size: 1.5rem;
 }
 
 .footer-div {
