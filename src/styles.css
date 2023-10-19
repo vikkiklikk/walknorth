@@ -194,12 +194,13 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     margin: 30px;
-    margin-top: 50px;
+    margin-top: 90px;
 }
 
 .carousel-container {
     z-index: 2;
     display: flex;
+    margin-top: 60px;
     padding: 20px;
     justify-content: center;
     overflow: hidden;
@@ -219,7 +220,7 @@ nav a:hover {
     height: 320px;
     justify-content: center;
     border: black solid 1px;
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 10px;
     background-color: #F8F8F8;
     align-items:baseline;
@@ -303,6 +304,73 @@ button {
     width: 50px;
     border: none;
     border-radius: 4rem;
+}
+
+.review-container {
+  display: flex;
+  margin-left: 270px;
+  margin-top: 170px;
+  margin-bottom: 100px;
+}
+
+.review-cards-coloum-right {
+  margin-left: 190px;
+}
+
+.review-card-header {
+  display: flex;
+  width: 360px;
+  height: 70px;
+  justify-content: center;
+  box-shadow: #323232; /*want to do a shadow*/
+  border-radius: 20px;
+  margin-bottom: 36px;
+  background-color: var(--custom-blue-1);
+  color: #F8F8F8;
+  align-items:baseline;
+  padding: 15px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add a smooth ease-in and ease-out transition for the hover effect */
+  transform: scale(1);
+}
+
+.review-card-more {
+  display: flex;
+  width: 360px;
+  height: 70px;
+  background-color: #F8F8F8;
+  border-radius: 20px;
+  color: #323232;
+  justify-content: center;
+  padding-top: 22px;
+  align-items: baseline;
+}
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  height: 300px;
+  justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 36px;
+  background-color: #F8F8F8;
+  align-items:baseline;
+  padding: 25px;
+  transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add a smooth ease-in and ease-out transition for the hover effect */
+  transform: scale(1);
+}
+
+.review-card-inner {
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.review-card h3 {
+  color: var(--custom-logo-text);
+  font-family: 'Bebas Neue';
+  font-size: 1.75rem;
+  letter-spacing: 1px;
 }
 
 .footer-div {
