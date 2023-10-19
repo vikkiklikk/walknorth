@@ -101,6 +101,7 @@ else {
     console.error('One or more elements were not found!');
 }
 
+//cloud animation
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const opacity = 1 - scrollY / 500; // Adjust the value as needed

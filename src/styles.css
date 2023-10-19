@@ -162,8 +162,9 @@ nav a:hover {
     width: 100%; /* Ensure the container covers the viewport width */
     max-width: 100%; /* Ensure the container doesn't exceed the image width */
     overflow: hidden;
-    padding-top: 40.25%;
+    padding-top: 40%;
 }
+
 .hero-container img {
     position: absolute;
     top: 0;
