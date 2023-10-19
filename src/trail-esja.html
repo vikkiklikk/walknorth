@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head class="bg-blue-700">
+<head>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,35 +11,47 @@
     <link href="/src/style-trail.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="nav-container">
         <!--Navbar-->
         <nav>
-            <div class="nav-space-div">
-                <!-- Walknorth Logo-->
-                <!--class="flex items-center space-x-2 p-4"-->
-                <img class="logo-container" src="images/logo-walknorth-original.svg" alt="Walknorth Logo">
-                <!-- Walknorth Title-->
-                <h1 class="logo-text">Walknorth</h1>
+            <!-- Walknorth Logo-->
+            <div class="logo-name">
+                <img src="images/logo-walknorth-original.svg" alt="Walknorth Logo">
+             <!-- Walknorth Title-->
+                <h1>Walknorth</h1>
             </div>
-            <!-- Hamburger Menu Icon class='bx bx-menu p-4' -->
-            <a class="ham-menu-icon" href="#"> <i class='bx bx-menu p-4'></i></a>
+             <!--Hamburger menu-->
+            <div >
+                <div class="hamburger-icon" id="menuBtn">
+                    <a href="#"><i class='bx bx-menu'></i></a>
+                </div>        
+                <div id="dropdownMenu" class="dropdown-menu">
+                    <a href="#"><img class="close" id="closeBtn" src="/src/images/icon-x.svg" alt="close"></a>
+                    <ul>
+                        <li><img src="/src/images/icon-search.svg" alt="search">
+                            <a href="#">START EXPLORING</a></li>
+                        <li><img src="/src/images/icon-photoalbum.svg" alt="photo album">
+                            <a href="#">PHOTO ALBUM</a></li>
+                        <li><img src="/src/images/icon-places.svg" alt="top places">
+                            <a href="#">TOP 10 PLACES</a></li>
+                        <li><img src="/src/images/icon-about.svg" alt="about">
+                            <a href="#">ABOUT US</a></li>
+                        <li><button>Log in</button></li>
+                    </ul>
+                </div>
+            </div>      
         </nav>
-    </div>
     <div class="content">
         <!--top of the page, picture and info-->
         <img src="/src/images/mount-esja.jpg" alt="Esja">
         <div class="info-section">
             <!--Section with the name of the trail and the small info-->
             <ul>
-                <!--class="flex flex-row space-x-36"-->
                 <li class="info-section-li-1">
                     <h2>Esja</h2>
                     <button id="favoriteButton" class="favoriteButton">
                         <img id="emptyStar" src="/src/images/icon-star.svg" class="star" alt="star">
-                        <!--I'm trying to hide the filled star, can't get it to work-->
                         <img id="filledStar" src="/src/images/icon-filledstar.svg" class="filled-star" alt="filled star">
                     </button></li>
-                    <!--class="flex flex-row pt-6 space-x-6-->
                 <li class="info-section-li-2">
                     <img src="/src/images/icon-car.svg" alt="car">
                     <p>25 km from Reykjavík</p></li>
