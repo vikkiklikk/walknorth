@@ -359,6 +359,7 @@ nav a:hover {
         .how-to-section h3 {
             font-size: 1.5rem; 
             font-weight: 600; /* font-semibold */
+            margin-bottom: 20px;
         }
 
         .how-to-section p {
@@ -367,6 +368,7 @@ nav a:hover {
         }
 
         .map-area {
+            display: flex;
             width: 60%;
         }
 
