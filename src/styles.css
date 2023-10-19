@@ -343,6 +343,12 @@ button {
   justify-content: center;
   padding-top: 22px;
   align-items: baseline;
+  cursor: pointer;
+}
+
+.review-card-more:hover {
+  background-color: #56729B;
+  color: #F8F8F8;
 }
 
 .review-card {
