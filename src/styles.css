@@ -197,90 +197,173 @@ nav a:hover {
     margin-top: 50px;
 }
 
-.carousel-container {
-    z-index: 2;
-    display: flex;
-    padding: 20px;
-    justify-content: center;
-    overflow: hidden;
+main header{
+  width: 98%;
+  height: 60px;
+  margin: 0 auto;
+  /*background: gray;*/
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+  border-bottom: 2px solid #ddd;
 }
-
-.carousel {
-    display: flex; /* Make the cards display in a row */
-    transition: transform 0.5s ease; /* Smooth sliding transition */
-    position: relative;
-}
-
-
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 260px;
-    height: 320px;
-    justify-content: center;
-    border: black solid 1px;
-    border-radius: 10px;
-    margin: 10px;
-    background-color: #F8F8F8;
-    align-items:baseline;
-    padding: 25px;
-    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Add a smooth ease-in and ease-out transition for the hover effect */
-    transform: scale(1);
-}
-
-.carousel a {
-  text-decoration: none;
-  color: #353535;
-
-}
-
-.card:hover {
-    /* Scale the card by a factor of 1.1 on hover (10% larger) */
-    transform: scale(1.1);
-}
-
-.card-inner img {
+header p span{
+  font-size: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    color: #555;
+     width: 30px;
     height: 30px;
-    justify-content: center;
+    display: inline-block;
+    line-height: 19px;
+    text-align: center;
+    border-radius: 3px;
 }
-.card h3 {
-    padding-top: 10px;
-    padding-bottom: 10px;
+header p span:hover{
+  background: #222;
+    color: white;
+}
+section{
+  width: 98%;
+  height: 500px;
+  /*background: red;*/
+  margin: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+}
+section::-webkit-scrollbar{
+  display: none;
+}
+section .product{
+        display: flex;
+        flex-direction: column;
+  min-width: 24%;
+  height: 90%;
+  background: #F8F8F8;
+  margin:  0 20px  0 0;
+  border-radius: 20px;
+  position: relative;
+  left: 0;
+  transition: 0.5s;
+
 }
 
-.card-inner {
+.product:hover {
+  background: #f8f8e9;
+}
+
+picture{
+  width: 100%;
+  height: 70%;
+  padding: 20px;
+  /*background: green;*/
+  display: flex;
+  overflow: hidden;
+
+}
+
+.product .card-inner {
     display: flex;
     flex-direction: column;
 }
 
-.card-distance {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 5px;
-
+picture img{
+  width: 100%;
 }
 
-.card-difficulty {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 5px;
+.detail,
+.button{
+        display: flex;
+        flex-direction: column;
+  width: 90%;
+  /*background: red;*/
+  margin: auto;
+  padding: 5px;
+        margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items:baseline;
+  font-size: 20px;
+  color: #444;
 }
 
-.card-length {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 5px;
-}
+.detail h3 {
+   padding-bottom: 10px;
+ }
 
-.card-hero img {
-    padding-top: 20px;
-    height: 160px;
-    width: auto;
-}
+.product .detail .inner-car {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+      }
 
+    .product .detail .inner-time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+    }
+    
+    .product .detail .inner-time img {
+        padding-right: 5px;
+    }
+
+    .product .detail .inner-hard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 18px;
+    }
+small{color: #555;}
+.detail a{
+  text-decoration: none;
+  padding: 6px 14px;
+    font-size: 15px;
+    display: inline-block;
+    background: #56729A;
+    color: white;
+
+}
+p.star{
+  margin: 5px auto;
+    width: 65%;
+    font-size: 25px;
+    color: #808080;
+}
+@media (max-width: 768px) {
+  .text h1{
+    font-size: 35px;
+  }
+  .text p{
+    width: 90%;
+  }
+  header h1{
+    font-size: 25px;
+  }
+  header p span{
+    font-size: 30px;
+  }
+  section .product {
+    min-width: 49%;
+    margin:  0 10px  0 0;
+  }
+  .detail, .button{
+    font-size: 16px;
+  }
+  a{
+    padding: 6px 10px;
+  }
+}
+    
+.carousel::-webkit-scrollbar{
+  display: none;
+    }
 button {
     cursor: pointer;
 }
