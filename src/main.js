@@ -55,6 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+document.addEventListener('DOMContentLoaded', (event) => {
 const favoriteButton = document.getElementById('favoriteButton');
 const emptyStar = document.getElementById('emptyStar');
 const filledStar = document.getElementById('filledStar');
