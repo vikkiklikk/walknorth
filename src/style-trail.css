@@ -68,6 +68,14 @@ nav {
     padding: 20px;
   }
 
+  .logo-link {
+    text-decoration: none;
+  }
+
+  .logo-link:hover {
+    text-decoration: none;
+  }
+
   .logo-name {
     display: flex;
   }
@@ -393,17 +401,25 @@ nav a:hover {
 .footer-icon-div {
     margin-left: 30px; 
     margin-right: 30px;
-    margin-top: 40px;
-}
-
-.footer-icon-div ul {
+    margin-top: 50px;
+  }
+  
+  .footer-icon-div ul {
     display: flex;
     list-style: none;
-}
-
-.footer-icon-div li {
+  }
+  
+  .footer-icon-div li {
     margin-right: 30px;
-}
+  }
+  
+  .footer-icon-div a {
+    transform: scale(1);
+  }
+  
+  .footer-icon-div a:hover {
+    transform: scale(1.1);
+  }
 
 .footer-legal-info ul {
     display: flex;
