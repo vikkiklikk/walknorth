@@ -79,3 +79,11 @@ if (favoriteButton && emptyStar && filledStar) {
 else {
     console.error('One or more elements were not found!');
 }
+
+//cloud animation
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const opacity = 1 - scrollY / 500; // Adjust the value as needed
+
+    document.querySelector('.cloud').style.opacity = opacity > 0 ? opacity : 0;
+});
