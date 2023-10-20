@@ -229,8 +229,8 @@ section::-webkit-scrollbar{
   display: none;
 }
 section .product{
-        display: flex;
-        flex-direction: column;
+  display: flex;
+  flex-direction: column;
   min-width: 24%;
   height: 90%;
   background: #F8F8F8;
@@ -239,11 +239,12 @@ section .product{
   position: relative;
   left: 0;
   transition: 0.5s;
+  cursor: grab;
 
 }
 
 .product:hover {
-  background: #f8f8e9;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
 picture{
@@ -266,14 +267,14 @@ picture img{
 }
 
 .detail,
-.button{
-        display: flex;
-        flex-direction: column;
+.button {
+  display: flex;
+  flex-direction: column;
   width: 90%;
   /*background: red;*/
   margin: auto;
   padding: 5px;
-        margin-bottom: 10px;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
   align-items:baseline;
@@ -316,10 +317,10 @@ small{color: #555;}
 .detail a{
   text-decoration: none;
   padding: 6px 14px;
-    font-size: 15px;
-    display: inline-block;
-    background: #56729A;
-    color: white;
+  font-size: 15px;
+  display: inline-block;
+  background: #56729A;
+  color: white;
 
 }
 p.star{
