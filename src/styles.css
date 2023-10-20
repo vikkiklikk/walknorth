@@ -418,6 +418,7 @@ button {
   transform: scale(1);
 }
 
+/*hover not working*/
 .footer-icon-div a:hover {
   transform: scale(1.1);
 }

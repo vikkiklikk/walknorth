@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-"use strict";
+document.addEventListener('DOMContentLoaded', (event) => {
 const favoriteButton = document.getElementById('favoriteButton');
 const emptyStar = document.getElementById('emptyStar');
 const filledStar = document.getElementById('filledStar');
@@ -100,3 +100,4 @@ if (favoriteButton && emptyStar && filledStar) {
 else {
     console.error('One or more elements were not found!');
 }
+});
