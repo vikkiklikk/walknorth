@@ -189,20 +189,11 @@ nav a:hover {
     letter-spacing: 0.25rem;
 }
 
-.hike-header {
-    z-index: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    margin-top: 50px;
-}
-
 main header{
   width: 98%;
   height: 60px;
   margin: 0 auto;
-  /*background: gray;*/
+  margin-top: 20px;
   display: flex;
   align-items: center;
   padding: 20px;
